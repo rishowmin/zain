@@ -1,0 +1,55 @@
+
+@media only screen and (max-width: 600px) {/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+    body {
+        font-family: 'Cairo', sans-serif;
+        color: #707070;
+    }  
+    a {
+        text-decoration: none;
+        color: #707070;
+    }  
+    a:hover {
+        text-decoration: none;
+        color: #282828;
+    }  
+    h1, h2, h3, h4, h5, h6 {
+        font-family: "Cairo", sans-serif;
+    }
+    label {
+        color: #282828;
+    }
+    .form-control:disabled, .form-control[readonly] {
+        background-color: #fff;
+        opacity: 1;
+    }
+    button:focus {
+        outline: none;
+    }
+    
+    /*--------------------------------------------------------------
+    # Header Section
+    --------------------------------------------------------------*/
+    .navbar-div {
+        flex: none;
+    }
+    .navbar-brand img {
+        width: 38px;
+    }
+    .navbar-toggler {
+        position: relative;
+        right: 65px;
+        border: none;
+        font-size: 1rem;
+    }
+    .navbar-brand {
+        position: relative;
+        left: 140px;
+    }
+
+
+    .body-container {
+        top: 60px;
+    }
+}

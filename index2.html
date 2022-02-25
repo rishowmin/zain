@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Home – SIM Validation – Zain Self-activation Portal</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" integrity="sha512-nMNlpuaDPrqlEls3IX/Q56H36qvBASwb3ipuo3MxeWbsQB1881ox0cRv7UPTgBlriqoynt35KjEwgGUeUXIPnw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js" integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon-32x32.png" rel="icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/styles.css" rel="stylesheet">
+
+    <!-- =======================================================
+    * Template Name: Zain Self-activation Portal
+    * Template URL: 
+    * Author: 
+    * License: 
+    ======================================================== -->
+</head>
+
+<body>
+    <!-- ======= Header ======= -->
+    <header id="header">
+        <div class="container-fluid align-items-center justify-content-between">
+            <nav class="navbar fixed-top navbar-expand-lg navbar-light">     
+                <div class="navbar-div">
+                    <div class="logo-div-width">
+                        <a class="navbar-brand" href="#"><img src="assets/img/Zain-Logo-300px.png" width="100%" alt="Logo"></a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                             
+                    <div class="collapse navbar-collapse navbar-div-width" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="index2-ar.html">العربية</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="cart-div-width">
+                    <a class="add-to-cart" href="#"><i data-feather="shopping-cart"></i><span>0</span></a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- ======= Main Body ======= -->
+    <main id="main">
+        <section id="body-section">
+            <div class="container-fluid body-container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="page-header mb-4">
+                            <h4>Enter SIM Card Details</h4>
+                        </div>
+
+                        <div class="page-session">
+                            <form id="validateForm" action="validateForm.php" method="post">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div id="valid_sim" class="valid-sim-alart">
+                                            <span><i class="mr-2" data-feather="check"></i></span>
+                                            <span>Great! Please fill your personal details and select a package type</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <label for="simSerialNo">SIM Serial Number</label>
+                                            <input type="text" class="form-control form-input" id="simSerialNo" name="simSerialNo" value="8996604212890888573" />
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <label for="pukCode">PUK</label>
+                                            <input type="text" class="form-control form-input" id="pukCode" name="pukCode" value="59778872" />
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <label for="iqamaNO">ID/Iqama number</label>
+                                            <input type="text" class="form-control form-input" id="iqamaNO" name="iqamaNO" />
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <label for="countrylist">Nationality</label>
+                                            <select class="form-control" id="countrylist" name="countrylist">
+                                                <option value="" selected hidden>Please select nationality</option>
+                                                <option value="113">Saudi Arabia</option>
+                                                <option value="102">Jordan</option>
+                                                <option value="103">Bahrain</option>
+                                                <option value="104">Syria</option>
+                                                <option value="105">Iraq</option>
+                                                <option value="106">Oman</option>
+                                                <option value="107">Palestine</option>
+                                                <option value="108">Qatar</option>
+                                                <option value="109">Kuwait</option>
+                                                <option value="110">Lebanon</option>
+                                                <option value="111">Yemen</option>
+                                                <option value="112">Southern Yemen</option>
+                                                <option value="101">United Arab Emirates</option>
+                                                <option value="114">Yemeni the sultans</option>
+                                                <option value="115">Bani Harith</option>
+                                                <option value="116">Kuwait - without</option>
+                                                <option value="117">Member of the tribes</option>
+                                                <option value="118">Residents of Bahrain</option>
+                                                <option value="119">Tribes adj to Ataf</option>
+                                                <option value="120">Alien KSA Passport</option>
+                                                <option value="121">Palestinian Egyptian</option>
+                                                <option value="122">Palestinian Lebanese</option>
+                                                <option value="123">Palestinian Jordan</option>
+                                                <option value="124">Palestinian Iraqi</option>
+                                                <option value="125">Palestinian Syria</option>
+                                                <option value="130">Arabs 48</option>
+                                                <option value="131">Tribe/AlHal</option>
+                                                <option value="132">Yemen - pilgrimage</option>
+                                                <option value="133">Tribes / Kuwait</option>
+                                                <option value="134">Non Kuwaiti</option>
+                                                <option value="135">Non Bahraini</option>
+                                                <option value="136">Non Qatari</option>
+                                                <option value="137">Non Emarati</option>
+                                                <option value="138">Non Omani</option>
+                                                <option value="142">Resident/ Tribal people</option>
+                                                <option value="143">Resident/Unknown</option>
+                                                <option value="201">Tunisia</option>
+                                                <option value="202">Algeria</option>
+                                                <option value="203">Djibouti</option>
+                                                <option value="204">Sudan</option>
+                                                <option value="205">Somalia</option>
+                                                <option value="206">Libya</option>
+                                                <option value="207">Egypt</option>
+                                                <option value="208">Morocco</option>
+                                                <option value="209">Mauritania</option>
+                                                <option value="301">Afghanistan</option>
+                                                <option value="302">Indonesia</option>
+                                                <option value="303">Iran</option>
+                                                <option value="304">Pakistan</option>
+                                                <option value="305">Bangladesh</option>
+                                                <option value="306">Brunei</option>
+                                                <option value="307">Myamar</option>
+                                                <option value="308">Thailand</option>
+                                                <option value="309">Turky</option>
+                                                <option value="310">Maldives</option>
+                                                <option value="311">Russia</option>
+                                                <option value="312">Singapore</option>
+                                                <option value="313">Sri Lanka</option>
+                                                <option value="314">Taiwan</option>
+                                                <option value="315">Philippines</option>
+                                                <option value="316">Vietnam</option>
+                                                <option value="317">Cambodia</option>
+                                                <option value="318">Koria</option>
+                                                <option value="319">Malaysia</option>
+                                                <option value="320">Nipal</option>
+                                                <option value="321">India</option>
+                                                <option value="322">Hong Kong</option>
+                                                <option value="323">Japan</option>
+                                                <option value="324">Bhutan</option>
+                                                <option value="325">China</option>
+                                                <option value="326">Cyprus</option>
+                                                <option value="328">North Korea</option>
+                                                <option value="329">Laos</option>
+                                                <option value="330">Mongolia</option>
+                                                <option value="331">Macao</option>
+                                                <option value="332">Turkistan</option>
+                                                <option value="333">Resident Balushi</option>
+                                                <option value="334">Bucharest</option>
+                                                <option value="335">Tribes emigrated</option>
+                                                <option value="336">Kazakhstan</option>
+                                                <option value="337">Uzbekistan</option>
+                                                <option value="338">Turkmenistan</option>
+                                                <option value="339">Tajikistan</option>
+                                                <option value="340">Kyrgyz</option>
+                                                <option value="341">Socotra</option>
+                                                <option value="342">Muhrah</option>
+                                                <option value="343">Azerbaijan</option>
+                                                <option value="344">Chechnya</option>
+                                                <option value="345">Dagestan</option>
+                                                <option value="346">Anquosh</option>
+                                                <option value="347">Tatarstan</option>
+                                                <option value="349">East Timor</option>
+                                                <option value="350">Resident</option>
+                                                <option value="351">Myanmar Resident</option>
+                                                <option value="352">Myanmar Pakistan</option>
+                                                <option value="353">Myanmar Bangladesh</option>
+                                                <option value="401">Ethiopia</option>
+                                                <option value="402">Uganda</option>
+                                                <option value="403">Botswana</option>
+                                                <option value="404">Burundi</option>
+                                                <option value="405">Chad</option>
+                                                <option value="406">Tanzania</option>
+                                                <option value="407">Togo</option>
+                                                <option value="408">Gabon</option>
+                                                <option value="409">Gambia</option>
+                                                <option value="410">Comoros</option>
+                                                <option value="411">South Africa</option>
+                                                <option value="412">Namibia</option>
+                                                <option value="413">Benin</option>
+                                                <option value="414">Rwanda</option>
+                                                <option value="415">Zimbabwe</option>
+                                                <option value="416">Zaire</option>
+                                                <option value="417">Zambia</option>
+                                                <option value="418">Ivory Coast</option>
+                                                <option value="419">Senegal</option>
+                                                <option value="420">Sierra Leone</option>
+                                                <option value="421">Ghana</option>
+                                                <option value="422">Guinea</option>
+                                                <option value="423">Guinea Bissau</option>
+                                                <option value="424">Burkina Faso</option>
+                                                <option value="425">Cameroon</option>
+                                                <option value="426">Congo</option>
+                                                <option value="427">Kenya</option>
+                                                <option value="428">Lesotho</option>
+                                                <option value="429">Liberia</option>
+                                                <option value="430">Mali</option>
+                                                <option value="432">Malawi</option>
+                                                <option value="433">Mauritius</option>
+                                                <option value="434">Mozambique</option>
+                                                <option value="435">Nigeria</option>
+                                                <option value="436">Niger</option>
+                                                <option value="437">Central Africa</option>
+                                                <option value="438">Angola</option>
+                                                <option value="439">Cabo Verde</option>
+                                                <option value="440">Equatorial Guinea</option>
+                                                <option value="441">Mlajasi</option>
+                                                <option value="442">Sao Tome - FranceBank</option>
+                                                <option value="443">Seychelles Islands</option>
+                                                <option value="444">Swaziland</option>
+                                                <option value="445">Bovthatswana</option>
+                                                <option value="446">Reunion</option>
+                                                <option value="447">Transkei</option>
+                                                <option value="448">Venda</option>
+                                                <option value="449">Eritrea</option>
+                                                <option value="450">Other African States</option>
+                                                <option value="451">Saint Helena</option>
+                                                <option value="452">Comorian island</option>
+                                                <option value="453">South Sudan</option>
+                                                <option value="501">Spain</option>
+                                                <option value="502">Albania</option>
+                                                <option value="503">Germany</option>
+                                                <option value="504">Ireland</option>
+                                                <option value="505">Italy</option>
+                                                <option value="506">United Kingdom</option>
+                                                <option value="507">Portugal</option>
+                                                <option value="508">Bulgaria</option>
+                                                <option value="509">Belgium</option>
+                                                <option value="510">Poland</option>
+                                                <option value="512">Denmark</option>
+                                                <option value="513">Romania</option>
+                                                <option value="514">Sweden</option>
+                                                <option value="515">Swiss</option>
+                                                <option value="516">France</option>
+                                                <option value="517">Finland</option>
+                                                <option value="518">Serbia</option>
+                                                <option value="519">Holland</option>
+                                                <option value="520">Yugoslavia</option>
+                                                <option value="521">Greece</option>
+                                                <option value="522">Andorra</option>
+                                                <option value="523">Austria</option>
+                                                <option value="524">Montenegro</option>
+                                                <option value="525">Hungary</option>
+                                                <option value="526">Iceland</option>
+                                                <option value="527">Liechtenstein</option>
+                                                <option value="528">Luxembourg</option>
+                                                <option value="529">Malta</option>
+                                                <option value="530">Monaco</option>
+                                                <option value="531">Norway</option>
+                                                <option value="532">San Moreno</option>
+                                                <option value="533">Vatican City</option>
+                                                <option value="534">Gibraltar</option>
+                                                <option value="536">Ukraine</option>
+                                                <option value="537">Byelorussia</option>
+                                                <option value="539">Armenia</option>
+                                                <option value="540">Moldova</option>
+                                                <option value="541">Georgia</option>
+                                                <option value="542">Lithuania</option>
+                                                <option value="543">Estonia</option>
+                                                <option value="544">Latvia</option>
+                                                <option value="545">Bosna</option>
+                                                <option value="546">Croatia</option>
+                                                <option value="547">Slovenia</option>
+                                                <option value="548">Serbia / Montenegro</option>
+                                                <option value="549">Macedonia</option>
+                                                <option value="550">Kosovo</option>
+                                                <option value="552">Czech Republic</option>
+                                                <option value="553">Slovakia</option>
+                                                <option value="554">Faroe Islands</option>
+                                                <option value="601">United States</option>
+                                                <option value="602">Argentina</option>
+                                                <option value="603">Barbados</option>
+                                                <option value="604">Brasil</option>
+                                                <option value="605">Panama</option>
+                                                <option value="606">Trinidad and Tobago</option>
+                                                <option value="607">Jamaica</option>
+                                                <option value="608">Joanna</option>
+                                                <option value="609">Venezuela</option>
+                                                <option value="610">Canada</option>
+                                                <option value="611">Columbia</option>
+                                                <option value="612">Bahamas</option>
+                                                <option value="613">Costa Rica</option>
+                                                <option value="614">Cuba</option>
+                                                <option value="615">Dominica</option>
+                                                <option value="616">Republic Dominica</option>
+                                                <option value="617">El Salvador</option>
+                                                <option value="618">Granada</option>
+                                                <option value="619">Guatemala</option>
+                                                <option value="620">Haiti</option>
+                                                <option value="621">Honduras</option>
+                                                <option value="622">Mexico</option>
+                                                <option value="623">Nicaragua</option>
+                                                <option value="624">Saint Lucia</option>
+                                                <option value="625">Saintt Vincent</option>
+                                                <option value="626">Bolivia</option>
+                                                <option value="627">Chile</option>
+                                                <option value="628">Ecuador</option>
+                                                <option value="629">Paraguay</option>
+                                                <option value="630">Peru</option>
+                                                <option value="631">Suriname</option>
+                                                <option value="632">Orajoa</option>
+                                                <option value="633">Saint Pierre Miquel</option>
+                                                <option value="634">Greenland</option>
+                                                <option value="635">Belize</option>
+                                                <option value="636">Bermda</option>
+                                                <option value="637">Turk/Caucasus Island</option>
+                                                <option value="638">San Cristovernivz</option>
+                                                <option value="639">Anguilla</option>
+                                                <option value="640">Antiques</option>
+                                                <option value="641">British Virgin</option>
+                                                <option value="642">Cayman Islands</option>
+                                                <option value="643">Monte Sirat</option>
+                                                <option value="644">Gyude Lube</option>
+                                                <option value="645">Martinico</option>
+                                                <option value="646">Other</option>
+                                                <option value="647">Bonaire</option>
+                                                <option value="648">Curako</option>
+                                                <option value="649">San Astatios</option>
+                                                <option value="650">Saba</option>
+                                                <option value="651">San Martin</option>
+                                                <option value="652">Puerto Rico</option>
+                                                <option value="653">Virgin Islands of US</option>
+                                                <option value="654">Falkland Islands</option>
+                                                <option value="655">French Guyana</option>
+                                                <option value="656">United Nations</option>
+                                                <option value="657">Cook Islands</option>
+                                                <option value="659">Barbuda</option>
+                                                <option value="663">Saint Kitts and Nevis</option>
+                                                <option value="701">Australia</option>
+                                                <option value="702">New Zealand</option>
+                                                <option value="703">Papua yoga</option>
+                                                <option value="704">New</option>
+                                                <option value="705">Antarctica</option>
+                                                <option value="706">Norfolk Island</option>
+                                                <option value="707">Tokelau</option>
+                                                <option value="708">Christmas Island</option>
+                                                <option value="709">Koko Island- Kellenj</option>
+                                                <option value="801">Fiji Islands</option>
+                                                <option value="802">Kiribati</option>
+                                                <option value="803">Nauru</option>
+                                                <option value="804">Solomon Islands</option>
+                                                <option value="805">Tonga</option>
+                                                <option value="806">Tuvalu</option>
+                                                <option value="807">Vanuoto</option>
+                                                <option value="808">Western Samoa</option>
+                                                <option value="809">American Samoa</option>
+                                                <option value="810">Guam</option>
+                                                <option value="811">Mariana Islands</option>
+                                                <option value="812">Micronesia</option>
+                                                <option value="813">Marechal Islands</option>
+                                                <option value="814">Belo</option>
+                                                <option value="815">French Polynesia</option>
+                                                <option value="816">Islands Wallis</option>
+                                                <option value="817">New Caledonia</option>
+                                                <option value="818">Madagascar</option>
+                                                <option value="819">Tribes Balobaid</option>
+                                                <option value="820">Tribes Alnassi</option>
+                                                <option value="821">Tribes near Alabar</option>
+                                                <option value="822">Tribes Alharth</option>
+                                                <option value="823">Tribes Nahd</option>
+                                                <option value="827">حصر -ج1</option>
+                                                <option value="900">Unknown</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <table class="plan-table" cellspacing="0">
+                                            <tbody>
+                                               <tr>
+                                                    <td class="plan-label">
+                                                        <label>Select your mobile plan</label>
+                                                    </td>
+                                                    <td class="plan-value">
+                                                        <ul class="plan-table-control plan-table-control-size">
+                                                            <li class="plan-table-option">
+                                                                <span>Postpaid</span>
+                                                            </li>
+                                                            <li class="plan-table-option">
+                                                                <span>Prepaid</span>
+                                                            </li>
+                                                        </ul>					
+                                                    </td>
+                                         
+                                               </tr>
+                                            </tbody>
+                                            <tbody>
+                                                <tr>
+                                                     <td class="plan-label plan-border">
+                                                         <label>Choose your number type</label>
+                                                     </td>
+                                                     <td class="plan-value plan-border">
+                                                         <ul class="plan-table-control plan-table-control-size">
+                                                             <li class="plan-table-option">
+                                                                 <span>Mobile Plans</span>
+                                                             </li>
+                                                             <li class="plan-table-option">
+                                                                 <span>Data Plans</span>
+                                                             </li>
+                                                         </ul>					
+                                                     </td>
+                                                </tr>
+                                             </tbody>
+                                         </table>
+                                    </div>
+
+                                    <div class="col-lg-12">
+                                        <div class="submit-btn mt-0">
+                                            <button type="submit" class="btn btn-primary" id="show-product-btn" name="showProductsBtn">Show me products!</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- End #main-Body -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="footer-inner-div">
+            <div class="container-fluid text-center">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="footer-logo">
+                            <img src="assets/img/Zain-Logo-white-56px.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="footer-copyright">
+                            <span>© 2022 Zain KSA</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="footer-social-links">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-youtube"></i></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/vendor/feather-icon/feather.js"></script>
+    <script src="assets/vendor/feather-icon/feather.min.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        feather.replace()
+    </script>
+
+    <script>
+        $(document).ready(function(){
+            var countrylist=
+            [
+                
+            ];
+            $("#countrylist").select2({
+                data:countrylist
+            });
+        });   
+    </script>
+
+</body>
+
+</html>
