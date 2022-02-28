@@ -26,6 +26,7 @@
 
     <!-- Template Main CSS File -->
     <link href="assets/css/styles.css" rel="stylesheet">
+    <link href="assets/css/styles-responsive.css" rel="stylesheet">
 
     <!-- =======================================================
     * Template Name: Zain Self-activation Portal
@@ -37,31 +38,54 @@
 
 <body>
     <!-- ======= Header ======= -->
-    <header id="header">
-        <div class="container-fluid align-items-center justify-content-between">
-            <nav class="navbar fixed-top navbar-expand-lg navbar-light">     
-                <div class="navbar-div">
-                    <div class="logo-div-width">
-                        <a class="navbar-brand" href="#"><img src="assets/img/Zain-Logo-300px.png" width="100%" alt="Logo"></a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                    </div>
-                             
-                    <div class="collapse navbar-collapse navbar-div-width" id="navbarSupportedContent">
-                        <ul class="navbar-nav ml-auto" style="padding-right: 0;">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#">الرئيسية</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="index2.html">English</a>
-                            </li>
+    <header class="header fixed-top">
+        <div class="wrapper header_wrapper">
+            <nav class="nav">
+                <button class="nav_toggle" aria-expanded="false" type="button">
+                    <span class="line"></span>
+                </button>
+                <ul class="nav_wrapper">
+                    <li class="nav_item active">
+                        <a href="#">الرئيسية</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="index2.html">English</a>
+                    </li>
+                    <li class="nav_item social-links">
+                        <ul class="mr-2">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
                         </ul>
+                    </li>
+                </ul>
+            </nav>
+    
+            <a class="brand-ar" href="#">
+                <img src="assets/img/Zain-Logo-300px.png" width="20%" alt="Logo">
+            </a>
+    
+            <nav class="cart-nav">
+                <a class="cart_toggle" href="#"><i data-feather="shopping-cart" aria-expanded="false"></i><span class="count-ar">0</span></a>
+                <div class="cart_wrapper">
+                    <div class="close-btn">
+                        <a href="">Close</a>
                     </div>
-                </div>
-
-                <div class="cart-div-width-ar">
-                    <a class="add-to-cart" href="#"><i data-feather="shopping-cart"></i><span>0</span></a>
+    
+                    <div class="cart-body">
+                        <div class="cart-cross-icon">
+                            <i data-feather="x" aria-expanded="false"></i>
+                        </div>
+    
+                        <div class="cart-content">
+                            <p>No products in the cart.</p>
+                        </div>
+                    </div>
+    
+                    <div class="cart-cont-btn">
+                        <a href="#" class="btn btn-default btn-block">Continue shopping</a>
+                    </div>
                 </div>
             </nav>
         </div>

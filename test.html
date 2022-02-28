@@ -1,65 +1,314 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="assets/vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
 
+  <style>
+  .sr-only {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
 
-<header class="header">
-  <div class="container-fluid">
-      <div class="row bg-dark">
-        
-        <div>
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+.button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  color: #fff;
+  background-color: #2fa0f6;
+  min-width: 120px;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.button svg {
+  display: inline-block;
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
+  fill: #fff;
+}
+
+.button span {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .button span {
+    display: initial;
+  }
+}
+
+.button--icon {
+  min-width: initial;
+  padding: 0.5rem;
+}
+
+
+
+.brand {
+  font-weight: bold;
+  font-size: 20px; 
+  text-align: center;
+}
+
+.site-header {
+  position: relative;
+  background-color: #ffffff;
+  border-bottom: 1px solid #eee;
+}
+
+.site-header_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+.nav_toggle {
+  display: none;
+}
+.nav_toggle span.line{
+    display: block;
+    position: relative;
+    left: 0;
+    width: 18px;
+    height: 1px;
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    -webkit-transition: -webkit-transform 0.1s ease;
+    transition: transform 0.1s ease;
+    background: #707070;
+}
+.nav_toggle span.line::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 100%;
+    height: 100%;
+    background-color: #707070;
+    transition: all 0.3s ease;
+}
+.nav_toggle span.line::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -7px;
+    width: 100%;
+    height: 100%;
+    background-color: #707070;
+    transition: all 0.3s ease;
+}
+.nav_toggle[aria-expanded="true"] span.line{
+  background: transparent;
+}
+.nav_toggle[aria-expanded="true"] span.line::after{
+  transform: rotate(45deg);
+  top: 0;
+}
+.nav_toggle[aria-expanded="true"] span.line::before{
+  transform: rotate(-45deg);
+  top: 0;
+}
+.nav_wrapper {
+  display: flex;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+  .nav_wrapper.active {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0); 
+  }
+  .nav_item a {
+    display: block;
+    padding: 16px 12px; 
+  }
+  .cart-nav {
+    width: 27px;
+  }
+.cart_toggle{
+  /* padding: 16px 12px; */
+}
+  .cart_toggle  svg {
+      width: 16px;
+      height: 16px;
+  }
+.cart_wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 30%;
+    bottom: 0;
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(100%);
+    background-color: #ffffff;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    display: block;
+}
+  .cart_wrapper.active {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0); 
+    padding: 0 37px;
+    box-shadow: 2px 0px 10px 5px #eee;
+    height: 100%;
+  }  
+
+  .close-btn {
+      height: 79px;
+      padding-top: 32px;
+      border-bottom: 1px solid #eee;
+      text-align: right;
+    }
+    .cart-body {
+      text-align: center;
+      padding: 40px 0;
+    }
+    .cart-cross-icon {
+      background-color: #eee;
+      width: 50px;
+      height: 50px;
+      padding: 13px;
+      border-radius: 50%;
+      margin: 0 auto;
+    }
+    .cart-cross-icon svg {
+      stroke-width: 1.4;
+    }
+    .cart-content {
+      margin-top: 20px;
+    }
+    .cart-cont-btn {}
+    .cart-cont-btn a {
+      color: #777;
+      border-radius: 10px;
+      border-color: #599901;
+      background: #fff;
+      padding: 8px;
+      opacity: 0.8;
+    }
+    .cart-cont-btn a:hover {
+      opacity: 1;
+    }
+     
+  .social-links {
+    display: none;
+  }
+    
+@media only screen and (max-width: 991px) {
+  .nav_toggle {
+    display: block;
+    padding: 14px 7px;
+    background-color: #ffffff;
+    cursor: pointer;
+    border: none;
+    outline: 0;
+  }
+  .nav_toggle:focus {
+    outline: 0;
+  }
+
+.nav_item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2); 
+}
+  .nav_wrapper {
+    position: fixed;
+    top: 72px;
+    left: 0;
+    width: 100%;
+    height: fit-content;
+    bottom: 0;
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-100%);
+    background-color: #d9f0f7;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    display: block; 
+  }
+  .social-links {
+    display: block;
+  }
+  .social-links ul {
+    display: flex;
+    list-style-type: none;
+    padding-left: 0;
+  }
+}
+
+  </style>
+
+
+<header class="site-header">
+  <div class="wrapper site-header_wrapper">
+    <nav class="nav">
+      <button class="nav_toggle" aria-expanded="false" type="button">
+        <span class="line"></span>
+      </button>
+      <ul class="nav_wrapper">
+        <li class="nav_item active">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav_item">
+            <a class="nav-link" href="index-ar.html">العربية</a>
+        </li>
+        <li class="nav_item social-links">
+          <ul>
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <a class="brand" href="#">
+      <img src="assets/img/Zain-Logo-300px.png" width="20%" alt="Logo">
+    </a>
+
+    <nav class="cart-nav">
+      <a class="cart_toggle" href="#"><i data-feather="shopping-cart" aria-expanded="false"></i><span>0</span></a>
+      <div class="cart_wrapper">
+        <div class="close-btn">
+          <a href="">Close</a>
         </div>
 
-        <div>
-          <nav class="navbar navbar-expand-lg">        
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </div>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link disabled" href="#">Disabled</a>
-                </li>
-              </ul>
-            </div>
-          </nav>
-        </div>
-
-      
-      <div>
-        <nav class="form-inline my-2 my-lg-0">
-          <div class="cart-div-width">
-            <a class="add-to-cart" href="#"><i data-feather="shopping-cart"></i><span>0</span></a>
+        <div class="cart-body">
+          <div class="cart-cross-icon">
+            <i data-feather="x" aria-expanded="false"></i>
           </div>
-        </nav>
+
+          <div class="cart-content">
+            <p>No products in the cart.</p>
+          </div>
+        </div>
+
+        <div class="cart-cont-btn">
+          <a href="#" class="btn btn-default btn-block">Continue shopping</a>
+        </div>
       </div>
-    </div>
+      <div></div>
+    </nav>
   </div>
+
+    
 </header>
 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
