@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Home – SIM Validation – Zain Self-activation Portal</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" integrity="sha512-nMNlpuaDPrqlEls3IX/Q56H36qvBASwb3ipuo3MxeWbsQB1881ox0cRv7UPTgBlriqoynt35KjEwgGUeUXIPnw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js" integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="assets/vendor/sweetalert/sweetalert.min.js"></script>
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon-32x32.png" rel="icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/vendor/sweetalert/sweetalert.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/styles.css" rel="stylesheet">
+    <link href="assets/css/styles-responsive.css" rel="stylesheet">
+
+    <!-- =======================================================
+    * Template Name: Zain Self-activation Portal
+    * Template URL: 
+    * Author: 
+    * License: 
+    ======================================================== -->
+</head>
+
+<body>
+    <!-- ======= Header ======= -->
+    <header class="header fixed-top">
+        <div class="wrapper header_wrapper">
+            <nav class="nav">
+                <button class="nav_toggle" aria-expanded="false" type="button">
+                    <span class="line"></span>
+                </button>
+                <ul class="nav_wrapper">
+                    <li class="nav_item active">
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="index3-ar.html">العربية</a>
+                    </li>
+                    <li class="nav_item social-links">
+                        <ul class="ml-2">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+    
+            <a class="brand" href="#">
+                <img src="assets/img/Zain-Logo-300px.png" width="20%" alt="Logo">
+            </a>
+    
+            <nav class="cart-nav">
+                <a class="cart_toggle" href="#"><i data-feather="shopping-cart" aria-expanded="false"></i><span class="count">0</span></a>
+                <div class="cart_wrapper">
+                    <div class="close-btn">
+                        <a href="">Close</a>
+                    </div>
+    
+                    <div class="cart-body">
+                        <div class="cart-cross-icon">
+                            <i data-feather="x" aria-expanded="false"></i>
+                        </div>
+    
+                        <div class="cart-content">
+                            <p>No products in the cart.</p>
+                        </div>
+                    </div>
+    
+                    <div class="cart-cont-btn">
+                        <a href="#" class="btn btn-default btn-block">Continue shopping</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- ======= Main Body ======= -->
+    <main id="main">
+        <section id="body-section">
+            <div class="container-fluid body-container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="page-header mb-4">
+                            <h4 class="text-center">Last step, lets activate!</h4>
+                        </div>
+
+                        <div class="page-session">
+                            <form id="validateForm" action="index5.html" method="post" onsubmit="return submitForm(this);">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="activate-msg">
+                                            <p>Great! Your ID was verified, and by proceeding below we will activate your new SIM</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 mb-3">
+                                        <div class="form-group">
+                                            <label for="simNo">SIM Number</label>
+                                            <input type="text" class="form-control form-input" id="simNo" name="simNo" value="596220341" />
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 mb-3">
+                                        <div class="form-group">
+                                            <label for="iqamaNO">ID/Iqama number</label>
+                                            <input type="text" class="form-control form-input" id="iqamaNO" name="iqamaNO" value="2510903137" />
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 mb-3">
+                                        <div class="form-group">
+                                            <label for="fullName">Full Name</label>
+                                            <input type="text" class="form-control form-input" id="fullName" name="fullName" value="User Full Name" />
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 mb-3">
+                                        <div class="form-group">
+                                            <label for="dob">Date of Birth</label>
+                                            <input type="text" class="form-control form-input" id="dob" name="dob" value="1987-12-28" />
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12">
+                                        <div class="submit-btn mt-0">
+                                            <!-- <button type="submit" class="btn btn-primary" id="show-product-btn" name="showProductsBtn">Show me products!</button> -->
+                                            <input type="submit" class="btn btn-primary" id="show-product-btn" name="showProductsBtn" value="ACTIVATE">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- End #main-Body -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="footer-inner-div">
+            <div class="container-fluid text-center">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="footer-logo">
+                            <img src="assets/img/Zain-Logo-white-56px.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="footer-copyright">
+                            <span>© 2022 Zain KSA</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="footer-social-links">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-youtube"></i></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/vendor/feather-icon/feather.js"></script>
+    <script src="assets/vendor/feather-icon/feather.min.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        feather.replace()
+    </script>
+
+    <script>
+        $(document).ready(function(){
+            var countrylist=
+            [
+                
+            ];
+            $("#countrylist").select2({
+                data:countrylist
+            });
+        });   
+    </script>
+
+    <script>
+        function submitForm(form) {
+            swal({
+                title: "Great!",
+                text: "Congratulations on your new line! Your contract will be ready for download in short...",
+                icon: "success",
+            })
+            .then((isOkay) => {
+                if(isOkay) {
+                    form.submit();
+                }
+            });
+            return false;
+        }
+    </script>
+
+</body>
+
+</html>

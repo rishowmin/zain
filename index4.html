@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Zain Self-activation Portal</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css"
+        integrity="sha512-nMNlpuaDPrqlEls3IX/Q56H36qvBASwb3ipuo3MxeWbsQB1881ox0cRv7UPTgBlriqoynt35KjEwgGUeUXIPnw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"
+        integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon-32x32.png" rel="icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/styles-external.css" rel="stylesheet">
+    <link href="assets/css/styles-responsive.css" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <!-- =======================================================
+    * Template Name: Zain Self-activation Portal
+    * Template URL: 
+    * Author: 
+    * License: 
+    ======================================================== -->
+</head>
+
+<body>
+    <!-- ======= Header ======= -->
+    <header class="header fixed-top">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="logo">
+                    <a href="#">
+                        <img src="assets/img/nic-logo-2.jpg" alt="">
+                    </a>
+                </div>
+                <button type="button" class="nav-toggler">
+                    <span></span>
+                </button>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="#" class="active">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- ======= Main Body ======= -->
+    <main id="main">
+        <section id="body-section">
+            <div class="container-fluid body-container">
+                <div class="row">
+                    <div class="col-xl-12 text-center">
+                        <div class="card">
+                            <h4 id="heading">Identity Authentication Management</h4>
+                            <form id="msform">
+                                <!-- progressbar -->
+                                <ul id="progressbar">
+                                    <li class="active" id="account"><strong>Username & Password</strong></li>
+                                    <li id="personal"><strong>SMS Verify</strong></li>
+                                    <li id="payment"><strong>Policy Enforcement Step</strong></li>
+                                    <li id="confirm"><strong>Identity Authentication Management</strong></li>
+                                </ul>
+                                <!-- fieldsets -->
+                                <fieldset>
+                                    <div class="form-card">
+                                        <div class="form-group">
+                                            <label for="username">Username</label>
+                                            <input type="text" class="form-control form-input" id="username" name="username" placeholder="Enter your username" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="username">Password</label>
+                                            <input type="password" class="form-control form-input" id="username" name="username" placeholder="Enter your password" />
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="captcha-area mb-2 mt-4">
+                                                <div class="captcha-img">
+                                                  <img src="assets/img/captcha-bg.png" alt="Captch Background">
+                                                  <span class="captcha"></span>
+                                                </div>
+                                                <button class="btn btn-outline-primary reload-btn"><i data-feather="refresh-ccw" aria-expanded="false"></i></button>
+                                            </div>
+
+                                            <label for="captcha">Enter the captcha below</label>
+                                            <input type="text" class="form-control form-input" id="captcha" name="captcha" placeholder="Enter the captcha" />
+                                        </div>
+                                    </div> 
+                                    <button type="button" name="next" class="btn btn-primary btn-block next action-button">
+                                        <i data-feather="log-in" aria-expanded="false"></i> <span>Login</span>
+                                    </button>
+
+                                    <div class="external-btn-div">                                        
+                                        <a href="#" class="btn btn-outline-primary change-pass-btn">
+                                            <i data-feather="unlock" aria-expanded="false"></i> <span>Forgot/Change Password</span>
+                                        </a>
+                                        <a href="#" class="btn btn-outline-primary start-over-btn">
+                                            <i data-feather="repeat" aria-expanded="false"></i> <span>Start Over</span>
+                                        </a>
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <div class="form-card">
+                                        <div class="otp-expire-msg">
+                                            <p>Your OTP will expire in 174 second(s)</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="oneTimePass">One Time Password</label>
+                                            <input type="text" class="form-control form-input" id="oneTimePass" name="oneTimePass" />
+                                        </div>
+                                    </div>    
+                                    <!-- <input type="button" name="previous" class="previous action-button-previous" value="Previous" /> -->
+                                    <button type="button" name="next" class="btn btn-primary btn-block next action-button">
+                                        <i data-feather="arrow-left" aria-expanded="false"></i> <span>Continue</span>
+                                    </button>
+
+                                    <div class="external-btn-div">                                        
+                                        <a href="#" class="btn btn-outline-primary change-pass-btn">
+                                            <i data-feather="message-square" aria-expanded="false"></i> <span>Resend SMS</span>
+                                        </a>
+                                        <a href="#" class="btn btn-outline-primary start-over-btn">
+                                            <i data-feather="repeat" aria-expanded="false"></i> <span>Start Over</span>
+                                        </a>
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <div class="form-card">
+                                        <div class="form-group">
+                                            <label for="username">Username</label>
+                                            <input type="text" class="form-control form-input" id="username" name="username" placeholder="Enter your username" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="username">Password</label>
+                                            <input type="password" class="form-control form-input" id="username" name="username" placeholder="Enter your password" />
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="captcha-area mb-2 mt-4">
+                                                <div class="captcha-img">
+                                                  <img src="assets/img/captcha-bg.png" alt="Captch Background">
+                                                  <span class="captcha"></span>
+                                                </div>
+                                                <button class="btn btn-outline-primary reload-btn"><i data-feather="refresh-ccw" aria-expanded="false"></i></button>
+                                            </div>
+
+                                            <label for="captcha">Enter the captcha below</label>
+                                            <input type="text" class="form-control form-input" id="captcha" name="captcha" placeholder="Enter the captcha" />
+                                        </div>
+                                    </div> 
+                                    <!-- <input type="button" name="previous" class="previous action-button-previous" value="Previous" /> -->
+                                    <button type="button" name="next" class="btn btn-primary btn-block next action-button">
+                                        <i data-feather="log-in" aria-expanded="false"></i> <span>Login</span>
+                                    </button>
+
+                                    <div class="external-btn-div">                                        
+                                        <a href="#" class="btn btn-outline-primary change-pass-btn">
+                                            <i data-feather="unlock" aria-expanded="false"></i> <span>Forgot/Change Password</span>
+                                        </a>
+                                        <a href="#" class="btn btn-outline-primary start-over-btn">
+                                            <i data-feather="repeat" aria-expanded="false"></i> <span>Start Over</span>
+                                        </a>
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <div class="form-card">
+                                        <div class="otp-expire-msg">
+                                            <p>Your OTP will expire in 174 second(s)</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="oneTimePass">One Time Password</label>
+                                            <input type="text" class="form-control form-input" id="oneTimePass" name="oneTimePass" />
+                                        </div>
+                                    </div>    
+                                    <!-- <input type="button" name="previous" class="previous action-button-previous" value="Previous" /> -->
+                                    <button type="button" name="next" class="btn btn-primary btn-block next action-button">
+                                        <i data-feather="arrow-left" aria-expanded="false"></i> <span>Continue</span>
+                                    </button>
+
+                                    <div class="external-btn-div">                                        
+                                        <a href="#" class="btn btn-outline-primary change-pass-btn">
+                                            <i data-feather="message-square" aria-expanded="false"></i> <span>Resend SMS</span>
+                                        </a>
+                                        <a href="#" class="btn btn-outline-primary start-over-btn">
+                                            <i data-feather="repeat" aria-expanded="false"></i> <span>Start Over</span>
+                                        </a>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- End #main-Body -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="footer-inner-div">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="footer-copyright">
+                            <div class="footer-logo">
+                                <img src="assets/img/nic-logo.png" width="100%" alt="">
+                            </div>
+                            <div class="footer-title">
+                                <p>Development and operation</p>
+                                <h4>National Information Center</h4>
+                                <p>National Single Sign-On All rights reserved &copy; 2020</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="footer-menu">
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="#">Terms & Conditions</a></li>
+                                <li><a href="#">Assitance & Support</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/vendor/feather-icon/feather.js"></script>
+    <script src="assets/vendor/feather-icon/feather.min.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main-external.js"></script>
+
+    <script>
+        feather.replace()
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            var countrylist =
+                [
+
+                ];
+            $("#countrylist").select2({
+                data: countrylist
+            });
+        });   
+    </script>
+
+</body>
+
+</html>

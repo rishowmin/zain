@@ -1,0 +1,766 @@
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Cairo', sans-serif;
+    color: #707070;
+}  
+a {
+    text-decoration: none;
+    color: #707070;
+}  
+a:hover {
+    text-decoration: none;
+    color: #282828;
+}  
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Cairo", sans-serif;
+}
+label {
+    color: #282828;
+}
+.form-control:disabled, .form-control[readonly] {
+    background-color: #fff;
+    opacity: 1;
+}
+button:focus {
+    outline: none;
+}
+  
+  
+/*--------------------------------------------------------------
+# Header Section
+--------------------------------------------------------------*/
+.header{
+	background-color: #FBF9FA;
+	padding: 12px 0;
+	line-height: 1.5;
+    box-shadow: 0px 5px 15px 0px rgb(0 0 0 / 15%);
+}
+
+.header .logo,
+.header .nav{
+	padding:0 15px;
+}
+.header .logo a{
+	font-size: 30px;
+	color: #ffffff;
+	text-transform: capitalize;
+}
+.header .nav ul {
+    margin-bottom: 0;
+}
+.header .nav ul li{
+	display: inline-block;
+	margin-left: 40px;
+}
+.header .nav ul li a{
+	display: block;
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #4B4B4B;
+	padding: 10px 0;
+	transition: all 0.5s ease;
+}
+.header .nav ul li a.active,
+.header .nav ul li a:hover{
+	color: #11998F;
+}
+.nav-toggler{
+	height: 34px;
+	width: 44px;
+	background-color: #ffffff;
+	border-radius: 4px;
+	cursor: pointer;
+	border:none;
+	display: none;
+	margin-right: 15px;
+}
+.nav-toggler:focus{
+	outline: none;
+	box-shadow: 0 0 15px rgba(255,255,255,0.5);
+}
+.nav-toggler span{
+    height: 2px;
+    width: 20px;
+    background-color: #4B4B4B;
+    display: block;
+    margin:auto;
+    position: relative;
+    transition: all 0.3s ease;
+}
+.nav-toggler.active span{
+	background-color: transparent;
+}
+.nav-toggler span::before,
+.nav-toggler span::after{
+	content: '';
+	position: absolute;
+	left:0;
+	top:0;
+	width: 100%;
+	height: 100%;
+	background-color: #4B4B4B;
+	transition: all 0.3s ease;
+}
+.nav-toggler span::before{
+	transform: translateY(-6px);
+}
+.nav-toggler.active span::before{
+	transform: rotate(45deg);
+}
+.nav-toggler span::after{
+	transform: translateY(6px);
+}
+.nav-toggler.active span::after{
+	transform: rotate(135deg);
+}
+
+
+  
+/*--------------------------------------------------------------
+# Body Section
+--------------------------------------------------------------*/
+#body-section {
+    margin-bottom: 100px;
+}
+.body-container {
+    position: relative;
+    top: 106px;
+    color: #282828;
+    width: 100%;
+    max-width: 526px;
+    margin: 0 auto;
+    padding-top: 61px;
+    padding-bottom: 87px;
+    overflow: hidden;
+    text-align: initial;
+}
+.form-group label {
+    display: inline-block;
+    line-height: 1.2;
+    font-size: 14px;
+    color: #282828;
+    padding-top: 5px;
+    padding-bottom: 8px;
+    margin: 0;
+}
+input.form-input {
+    font-size: 14px;
+    color: #212529;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 8px 10px;
+}
+input.form-input:focus {
+    font-size: 14px;
+    color: #212529;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    outline: 0;
+    box-shadow: none;
+}
+
+
+/* multi-step form */
+#heading {
+    color: #11998F;
+    font-weight: 600;
+}
+
+#msform {
+    text-align: center;
+    position: relative;
+    margin-top: 20px
+}
+
+#msform fieldset {
+    background: white;
+    border: 0 none;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    margin: 20px;
+    position: relative;
+    padding: 30px;
+    box-shadow: 5px 5px 25px 6px rgb(0 0 0 / 15%);
+    -webkit-box-shadow: 0px 1px 8px 0px rgb(0 0 0 / 15%);
+}
+
+.form-card {
+    text-align: left
+}
+
+.otp-expire-msg {}
+
+    .otp-expire-msg p {
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+#msform fieldset:not(:first-of-type) {
+    display: none
+}
+
+#msform label {
+    display: inline-block;
+    line-height: 1.2;
+    font-size: 14px;
+    color: #918e8e;
+    padding-top: 5px;
+    padding-bottom: 8px;
+    margin: 0;
+    font-weight: 600;
+}
+
+#msform input,
+#msform textarea {
+    font-size: 14px;
+    color: #212529;
+    background-color: #fff;
+    border: 2px solid lightgray;
+    border-radius: 5px;
+    padding: 8px 10px;
+}
+
+#msform input:focus,
+#msform textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 2px solid #11998F;
+    outline-width: 0
+}
+
+#msform .action-button {
+    width: 100%;
+    background: #11998F;
+    color: white;
+    border: 0 none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 8px 10px;
+    margin-top: 25px;
+}
+
+#msform .action-button svg {
+    width: 15px;
+}
+
+#msform .action-button span {
+    position: relative;
+    bottom: 6px;
+}
+
+#msform .action-button:hover,
+#msform .action-button:focus {
+    background-color: #11998F
+}
+
+#msform .action-button-previous {
+    width: 100px;
+    background: #616161;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px 10px 0px;
+    float: right
+}
+
+#msform .action-button-previous:hover,
+#msform .action-button-previous:focus {
+    background-color: #000000
+}
+
+#msform .external-btn-div {
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+}
+
+#msform .external-btn-div .change-pass-btn {
+    font-size: 12px;
+    width: 55%;
+    padding: 0;
+    border: 2px solid #8f8f8f;
+    color: #8f8f8f;
+    font-weight: 600;
+}
+
+#msform .external-btn-div .change-pass-btn svg {
+    width: 12px;
+    stroke-width: 3px;
+}
+
+#msform .external-btn-div .change-pass-btn span {
+    position: relative;
+    bottom: 7px;
+}
+
+#msform .external-btn-div .change-pass-btn:hover {
+    border: 2px solid #11998F;
+    color: #11998F;
+    background: none;
+}
+
+#msform .external-btn-div .change-pass-btn:hover svg {    
+    color: #11998F;
+}
+
+#msform .external-btn-div .start-over-btn {
+    font-size: 12px;
+    width: 35%;
+    padding: 0;
+    border: 2px solid #8f8f8f;
+    color: #8f8f8f;
+    font-weight: 600;
+}
+
+#msform .external-btn-div .start-over-btn svg {
+    width: 12px;
+    stroke-width: 3px;
+}
+
+#msform .external-btn-div .start-over-btn span {
+    position: relative;
+    bottom: 7px;
+}
+
+#msform .external-btn-div .start-over-btn:hover {
+    border: 2px solid #11998F;
+    color: #11998F;
+    background: none;
+}
+
+#msform .external-btn-div .start-over-btn:hover svg {    
+    color: #11998F;
+}
+
+.card {
+    z-index: 0;
+    border: none;
+    position: relative
+}
+
+.fs-title {
+    font-size: 25px;
+    color: #673AB7;
+    margin-bottom: 15px;
+    font-weight: normal;
+    text-align: left
+}
+
+.purple-text {
+    color: #673AB7;
+    font-weight: normal
+}
+
+.steps {
+    font-size: 25px;
+    color: gray;
+    margin-bottom: 10px;
+    font-weight: normal;
+    text-align: right
+}
+
+.fieldlabels {
+    color: gray;
+    text-align: left
+}
+
+#progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+    color: lightgrey
+}
+
+#progressbar .active {
+    color: #11998F;
+}
+
+#progressbar li {
+    list-style-type: none;
+    font-size: 15px;
+    width: 25%;
+    float: left;
+    position: relative;
+    font-weight: 400
+}
+
+#progressbar #account.active:before,
+#progressbar #personal.active:before,
+#progressbar #payment.active:before,
+#progressbar #confirm.active:before {
+    color: #11998F;
+}
+
+#progressbar #account:before {
+    content: "1";
+    font-weight: bold;
+}
+
+#progressbar #personal:before {
+    content: "2";
+    font-weight: bold;
+}
+
+#progressbar #payment:before {
+    content: "3";
+    font-weight: bold;
+}
+
+#progressbar #confirm:before {
+    content: "4";
+    font-weight: bold;
+}
+
+#progressbar li:before {
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+    display: block;
+    font-size: 20px;
+    color: lightgray;
+    background: #ffffff;
+    border: 2px solid lightgray;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    padding: 0;
+}
+
+#progressbar li:nth-child(1)::after {
+    width: 50%;
+    left: 66px;
+}
+
+#progressbar li:nth-child(4)::after {
+    width: 50%;
+    right: 66px;
+}
+
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: lightgray;
+    border: 2px solid;
+    position: absolute;
+    left: 0;
+    top: 25px;
+    z-index: -1
+}
+
+#progressbar li.active:before,
+#progressbar li.active:after {
+    background: #ffffff;
+    border: 2px solid #11998F;
+}
+
+.progress {
+    height: 20px
+}
+
+.progress-bar {
+    background-color: #673AB7
+}
+
+.fit-image {
+    width: 100%;
+    object-fit: cover
+}
+
+
+
+/* captcha */
+.captcha-area {
+    display: flex;
+}
+.captcha-area .captcha-img{
+  height: 45px;
+  width: 60%;
+  user-select: none;
+  background: #000;
+  border: 1px solid #000;
+  position: relative;
+}
+.captcha-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.95;
+}
+.captcha-img .captcha{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  color: #fff;
+  font-size: 25px;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  text-shadow: 0px 0px 2px #b1b1b1;
+}
+.wrapper button{
+  outline: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  background: #4db2ec;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+.wrapper button:hover{
+  background: #2fa5e9;
+}
+.captcha-area .reload-btn{
+    width: 55px;
+    height: 45px;
+    font-size: 25px;
+    border-color: #11998F;
+    color: #11998F;
+    margin-left: 20px;
+}
+.captcha-area .reload-btn:hover{
+    background-color: #11998F;
+    border-color: #11998F;
+    color: #fff;
+}
+.captcha-area .reload-btn svg{
+  transition: transform 0.3s ease;
+  width: 15px;
+}
+.captcha-area .reload-btn:hover svg{
+  transform: rotate(15deg);
+}
+
+/*--------------------------------------------------------------
+# Footer Section
+--------------------------------------------------------------*/
+.footer-inner-div {
+    height: auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #ECEDF2;
+    color: #111;
+    margin: 0 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.footer-copyright {
+    display: flex;
+}
+.footer-logo {
+    width: 25%;
+}
+.footer-logo img {
+    margin: 12px 0;
+}
+.footer-title {
+    margin-left: 20px;
+    line-height: 24px;
+}
+.footer-title h4 {
+    margin-bottom: 0;
+    font-size: 20px;
+}
+.footer-title p {
+    margin-bottom: 0;
+    font-size: 14px;
+}
+.footer-menu {
+    margin: 12px 0;
+}
+.footer-menu ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: end;
+}
+.footer-menu ul li {
+    padding: 10px;
+}
+.footer-menu ul li a {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 991px) {
+    .nav-toggler{
+        display: block;
+    }
+    .header .nav{
+        width: 100%;
+        padding:0;
+        max-height: 0px;
+        overflow: hidden;
+        visibility: hidden;
+        transition: all 0.5s ease;
+    }
+    .header .nav.open{
+        visibility: visible;
+    }
+    .header .nav ul{
+        padding:12px 15px 0;
+        margin-top: 12px;
+        border-top:1px solid rgba(255,255,255,0.2);
+    }
+    .header .nav ul li{
+        display: block;
+        margin:0;
+    }
+
+    .body-container {
+        padding-bottom: 0;
+    }
+
+    #heading {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    .otp-expire-msg p {
+        font-size: 12px;
+    }
+
+    #progressbar li {
+        font-size: 12px;
+    }
+
+    #progressbar li:before {
+        width: 35px;
+        height: 35px;
+        line-height: 32px;
+        font-size: 12px;
+    }
+
+    #progressbar li:nth-child(1)::after {
+        width: 51%;
+        left: 40px;
+    }
+
+    #progressbar li:after {
+        top: 15px;
+    }
+
+    #msform fieldset {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    #msform label {
+        font-size: 12px;
+    }
+
+    #msform input, #msform textarea {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    .captcha-area .captcha-img {
+        height: 40px;
+    }
+
+    .captcha-area .reload-btn {
+        width: 48px;
+        height: 40px;
+        font-size: 23px;
+        margin-left: 15px;
+    }
+
+    #msform .action-button {
+        padding: 4px 10px;
+        font-size: 12px;
+        line-height: 0;
+    }
+
+    #msform .action-button svg {
+        width: 12px;
+    }
+
+    #msform .action-button span {
+        bottom: 8px;
+    }
+
+    #msform .external-btn-div .change-pass-btn {
+        font-size: 10px;
+    }
+
+    #msform .external-btn-div .change-pass-btn svg {
+        width: 10px;
+    }
+
+    #msform .external-btn-div .change-pass-btn span {
+        bottom: 8px;
+    }
+
+    #msform .external-btn-div .start-over-btn {
+        font-size: 10px;
+    }
+
+    #msform .external-btn-div .start-over-btn svg {
+        width: 10px;
+    }
+
+    #msform .external-btn-div .start-over-btn span {
+        bottom: 8px;
+    }
+
+    .footer-inner-div {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .footer-logo {
+        width: 30%;
+    }
+
+    .footer-logo img {
+        margin: 30px 0;
+    }
+
+    .footer-title {
+        margin-left: 16px;
+        line-height: 22px;
+    }
+
+    .footer-title p {
+        font-size: 12px;
+    }
+
+    .footer-title h4 {
+        margin-bottom: 0;
+        font-size: 16px;
+    }
+
+    .footer-menu {
+        margin-bottom: 0;
+    }
+
+    .footer-menu ul {
+        display: inline-block;
+        line-height: 2px;
+        margin-bottom: 0;
+    }
+
+    .footer-menu ul li {
+        float: left;
+    }
+
+    .footer-menu ul li a {
+        font-size: 12px;
+    }
+ }
